@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tour OF DoM</title>
+
+    <!-- Css link -->
+    <link rel="stylesheet" href="styles/style.css">
+    <style>
+        ul li{
+            color: deeppink
+        }
+
+        #food-title{
+            color: crimson;
+        }
+
+        #place-title{
+            font-weight: 800;
+            color: magenta;
+        }
+
+        .fav-place{
+            color: darkorchid;
+        }
+    </style>
+
+</head>
+<body>
+    <header>
+        <h1 id="head-title" class="head-color head-description ">Introduction To DOM</h1>
+        <p>The W3C Document Object Model (DOM) is a platform and language-neutral interface that allows programs and scripts to dynamically access and update the content, structure, and style of a document."</p>
+    </header>
+    <main id="main-container">
+        <section>
+            <h1>Fruits I Love</h1>
+            <ul id="fruits-list">
+                <li>Apple</li>
+                <li>Banana</li>
+                <li>Orange</li>
+            </ul>
+        </section>
+
+        <section id="place-container">
+            <h1 id="place-title">Places I Love</h1>
+            <ul class="place-list">
+                <li class="fav-place">Sunamgong</li>
+                <li class="fav-place">Jafflong</li>
+                <li class="fav-place">Jamalgonj</li>
+                <li class="fav-place">Sajek</li>
+                <li class="fav-place">Bandorban</li>
+                <li class="fav-place">Sundorbon</li>
+                <li>Cox-Bazar</li>
+            </ul>
+        </section>
+
+        <section>
+           <h1 id="food-title">Food I Love</h1>
+           <ul>
+            <li>Chicken Biriani</li>
+            <li>Kacchi Biriani</li>
+            <li>DOM Biriani</li>
+           </ul>
+        </section>
+    </main>
+    <footer>
+
+    </footer>
+
+    <!-- Javascript Add -->
+    <script src="js/dom.js"></script>
+    <script src="js/append.js"></script>
+    <script>
+    
+        const ulLists= document.getElementsByTagName('ul');
+        // console.log(ulLists);
+        for(const ul of ulLists)
+        {
+            // console.log(ul.innerText);
+        }
+
+        // access by getElementByID
+
+    //    console.log(document.getElementById('food-title').innerText);
+
+    const foodTitle= document.getElementById('food-title');
+    foodTitle.innerText= 'My Favourite Food List';
+
+
+    // getElementsByClassName
+
+    const favPlaces= document.getElementsByClassName('fav-place');
+    // console.log(favPlaces);
+
+    for(const place of favPlaces)
+    {
+        // console.log(place.innerText);
+    }
+
+    // querySelectorAll
+    const allPlaces= document.querySelectorAll('#place-container li');
+    // 
+    for(const place of allPlaces)
+    {
+        // console.log(place.innerText);
+    }
+
+    //get first child of the element
+
+    const firstLi= document.querySelector('#place-container li');
+    // console.log(firstLi);
+
+    </script>
+</body>
+</html>

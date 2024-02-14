@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comment Box</title>
+</head>
+<body>
+    <h1>Please, Add New Paragraph</h1>
+    <div id="comment-container">
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia officiis quos voluptatum iusto aliquid aspernatur, saepe non incidunt commodi nobis. Nulla beatae culpa exercitationem aspernatur omnis rerum commodi, eius aliquam.</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia officiis quos voluptatum iusto aliquid aspernatur, saepe non incidunt commodi nobis. Nulla beatae culpa exercitationem aspernatur omnis rerum commodi, eius aliquam.</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia officiis quos voluptatum iusto aliquid aspernatur, saepe non incidunt commodi nobis. Nulla beatae culpa exercitationem aspernatur omnis rerum commodi, eius aliquam.</p>
+    </div>
+
+    <div>
+        <textarea name="" id="text-area" cols="40" rows="5"></textarea>
+        <br>
+        <button id="btn-post">Post</button>
+    </div>
+
+    <script>
+        // step-1:post button id diye dhorte hobe
+        document.getElementById('btn-post').addEventListener('click',function(event){
+            // step-2: comment box dhore nite hobe
+            const commentBox= document.getElementById('text-area');
+            // step- 2.1: comment box er value nite hobe
+            const commentBoxValue= commentBox.value;
+            // console.log(this);
+            console.log(commentBoxValue);
+            //step-3: comment-container div dhore nite hobe
+
+            const commentContainer= document.getElementById('comment-container');
+            // step-4: comment-container er majhe akta p tag banabo
+            const p= document.createElement('p');
+            // step-5: p tag moddhe comment box er value push korbo
+            p.innerText= commentBoxValue;
+            // p tag k push korte hobe comment-container er majhe
+            commentContainer.appendChild(p);
+            console.log(commentContainer);
+
+            // text area clear kora
+            commentBox.value= '';
+           
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Handler Another Style</title>
+</head>
+<body>
+    <h1>Add Event Listener</h1>
+    <h2 id="default-text">Default Text</h2>
+    <button onclick="changeDefaultText()">Change Default Text</button>
+
+    <h2 id="html-short">HTML Short Form</h2>
+    <button id="html-full">HTML FULL FORM</button>
+
+    <script>
+        // first process change or update text using btn
+        function changeDefaultText(){
+
+            const changeText= document.getElementById('default-text');
+            changeText.innerText= 'It is the updated text of default text'
+        }
+
+        // popular process change or update text using button
+
+        document.getElementById('html-full').addEventListener('click', function(){
+            const shortHTML= document.getElementById('html-short');
+            shortHTML.innerText= 'Hyper Text MarkUp Language';
+
+        })
+
+    </script>
+    
+</body>
+</html>
